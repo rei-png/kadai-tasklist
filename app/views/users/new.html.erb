@@ -1,0 +1,20 @@
+<h1>ユーザ新規登録</h1>
+
+<%= form_with(model: @user, local: true) do |f| %>
+    
+  <%= f.label :name, "Name" %>
+  <%= f.text_field :name, class: "form-control" %>
+      
+  <%= f.label :email, "Email" %>
+  <%= f.email_field :email, class: "form-control" %>
+      
+  <%= f.label :password, "Password" %>
+  <%= f.password_field :password, class: "form-control" %>      
+  
+  <%= f.label :password_confirmation, "Confirmation" %>
+  <%= f.password_field :password_confirmation, class: "form-control" %>    
+      
+  <%= f.submit "登録" %>
+<% end %>
+
+<%= link_to "Top", root_path %>
